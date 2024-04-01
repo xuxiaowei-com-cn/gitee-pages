@@ -22,6 +22,9 @@ build:
     paths:
       - .m2/repository
   script:
+    - GPG_FILE=`find / -name xuxiaowei_0x30F97859_SECRET`
+    - echo $GPG_FILE
+    - gpg --import $GPG_FILE
     - SETTINGS_FILE=/usr/share/maven/conf/settings.xml
     - sed -i "s#</servers>#<server><id>ossrh</id><username>$ossrh_user</username><password>$ossrh_pass</password></server>&#" $SETTINGS_FILE
-    - mvn clean package source:jar javadoc:jar deploy -DskipTests=true
+    - mvn clean package source:jar javadoc:jar deploy -Pgpg -DskipTests=true
