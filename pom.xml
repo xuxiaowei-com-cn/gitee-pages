@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.com.xuxiaowei.gitee</groupId>
     <artifactId>gitee-pages</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>gitee-pages</name>
     <description>Gitee Pages 自动更新</description>
     <url>https://github.com/xuxiaowei-com-cn/gitee-pages</url>
