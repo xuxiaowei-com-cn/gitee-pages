@@ -10,8 +10,13 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.Collections;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class GiteePagesApplication {
+
+	private static final Pattern PATTERN = Pattern
+		.compile("<input type=\\\\\"hidden\\\\\" name=\\\\\"authenticity_token\\\\\" value=\\\\\"[^\"]*\\\\\" />");
 
 	public static void main(String[] args) {
 
@@ -63,7 +68,11 @@ public class GiteePagesApplication {
 
 		String string = new RestTemplate().postForObject(rebuild, httpEntity, String.class);
 
-		System.out.println(string);
+		Matcher matcher = PATTERN.matcher(string);
+
+		String result = matcher.replaceAll("");
+
+		System.out.println(result);
 	}
 
 }
