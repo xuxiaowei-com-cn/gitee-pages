@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/*.exe
+/*/*.exe
+/gitee-pages-windows-*
+/gitee-pages-linux-*
+/gitee-pages-darwin-*
+
+/buildinfo/buildinfo
