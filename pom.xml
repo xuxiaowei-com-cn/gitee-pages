@@ -18,7 +18,7 @@
         <spring.version>5.3.34</spring.version>
         <spring-javaformat-maven-plugin.version>0.0.41</spring-javaformat-maven-plugin.version>
         <maven-assembly-plugin.version>3.7.1</maven-assembly-plugin.version>
-        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+        <maven-jar-plugin.version>3.4.0</maven-jar-plugin.version>
         <maven-gpg-plugin.version>3.2.3</maven-gpg-plugin.version>
         <skipTests>true</skipTests>
     </properties>
